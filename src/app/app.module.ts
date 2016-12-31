@@ -5,8 +5,9 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BooksComponent } from './books/books.component';
-import { AuthorsComponent } from './authors/authors.component';
+
+import { Mod1Module, BooksComponent } from './mod1/mod1.module';
+import { Mod2Module, AuthorsComponent } from './mod2/mod2.module';
 
 const routes: Routes = [
 { path: 'books', component: BooksComponent },
@@ -16,15 +17,15 @@ const routerModule = RouterModule.forRoot(routes);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BooksComponent,
-    AuthorsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routerModule
+    routerModule,
+    Mod1Module,
+    Mod2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
