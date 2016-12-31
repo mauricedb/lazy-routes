@@ -10,6 +10,7 @@ export class AuthorsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('AuthorsComponent')
   }
 
 }
