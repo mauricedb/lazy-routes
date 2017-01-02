@@ -6,10 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { Mod1Module } from './mod1/mod1.module';
-import { Mod2Module } from './mod2/mod2.module';
-
 const routes: Routes = [
+  { path: 'books', loadChildren: './mod1/mod1.module#Mod1Module' },
+  { path: 'authors', loadChildren: './mod2/mod2.module#Mod2Module' },
 ];
 const routerModule = RouterModule.forRoot(routes);
 
@@ -21,9 +20,7 @@ const routerModule = RouterModule.forRoot(routes);
     BrowserModule,
     FormsModule,
     HttpModule,
-    routerModule,
-    Mod1Module,
-    Mod2Module
+    routerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
