@@ -7,12 +7,11 @@ import { BooksComponent } from './books/books.component';
 const routes: Routes = [
   { path: '', component: BooksComponent },
 ];
-const routerModule = RouterModule.forChild(routes);
 
 @NgModule({
   imports: [
     CommonModule,
-    routerModule
+    RouterModule.forChild(routes)
   ],
   declarations: [BooksComponent],
 })
