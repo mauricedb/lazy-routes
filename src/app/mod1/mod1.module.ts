@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BooksComponent } from './books/books.component';
 
 const routes: Routes = [
-  { path: '', component: BooksComponent },
+  { path: 'books', component: BooksComponent },
 ];
 
 @NgModule({

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthorsComponent } from './authors/authors.component';
 
 const routes: Routes = [
-  { path: '', component: AuthorsComponent },
+  { path: 'authors', component: AuthorsComponent },
 ];
 
 @NgModule({
